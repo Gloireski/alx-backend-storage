@@ -16,15 +16,15 @@ Learning objectives:
 
 ## Files
 
-[0-list_databases]('./0-list_databases')
+[0-list_databases](./0-list_databases)
 
 Lists all databases in MongoDB.
 
-[1-use_or_create_database]('./1-use_or_create_database')
+[1-use_or_create_database](./1-use_or_create_database)
 
 Create or uses the dabases my_db
 
-[5-count]('./5-count')
+[5-count](./5-count)
 
 Displays the number of documents in the collection
 
