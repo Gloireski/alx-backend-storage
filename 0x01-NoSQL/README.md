@@ -35,3 +35,7 @@ update all documents with name="Holberton school" adding the attribute address w
 [7-delete](./7-delete)
 
 deletes all documents with name="Holberton school" in the collection school
+
+[9-insert_school.py](./9-insert_school.py)
+
+Python function that inserts a new document in a collection based on kwargs
