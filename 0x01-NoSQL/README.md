@@ -27,3 +27,7 @@ Create or uses the dabases my_db
 [5-count]('./5-count')
 
 Displays the number of documents in the collection
+
+[6-update](./6-update)
+
+update all documents with name="Holberton school" adding the attribute address with the value “972 Mission street”
