@@ -24,7 +24,7 @@ class Cache:
         return key
 
 
-def get(self, key: str, fn: Optional[Callable] = None) -> Utype:
+def get(self, key: str, fn: Optional[Callable] = None) -> Any:
     """
     convert the data back
     to the desired format
@@ -32,11 +32,17 @@ def get(self, key: str, fn: Optional[Callable] = None) -> Utype:
     :param fn:
     :return:
     """
-    if fn:
-        return fn(self._redis.get(key))
-    data = self._redis.get(key)
-    return data
-
+    client = self._redis
+    value = client.get(key)
+    if not value:
+        return
+    if fn is int:
+        return self.get_int(value)
+    if fn is str:
+        return self.get_str(value)
+    if callable(fn):
+        return fn(value)
+    return value
 
 def get_int(self: bytes) -> int:
     """get a number"""
