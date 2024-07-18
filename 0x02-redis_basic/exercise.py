@@ -25,7 +25,13 @@ class Cache:
 
 
 def get(self, key: str, fn: Optional[Callable] = None) -> Utype:
-    """ def get """
+    """
+    convert the data back
+    to the desired format
+    :param key:
+    :param fn:
+    :return:
+    """
     if fn:
         return fn(self._redis.get(key))
     data = self._redis.get(key)
