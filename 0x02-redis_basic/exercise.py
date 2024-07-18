@@ -24,7 +24,7 @@ class Cache:
         return key
 
 
-def get(key: str, fn: Optional[Callable] = None) -> Utype:
+def get(self, key: str, fn: Optional[Callable] = None) -> Utype:
     """ def get """
     if fn:
         return fn(self._redis.get(key))
