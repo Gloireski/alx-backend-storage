@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ define get_page """
 import requests
+import redis
 from typing import Callable
 from functools import wraps
 
