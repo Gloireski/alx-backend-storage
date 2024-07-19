@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-""" define get_page """
-import requests
+"""
+Caching request module
+"""
 import redis
-from typing import Callable
+import requests
 from functools import wraps
+from typing import Callable
 
 
 def track_get_page(fn: Callable) -> Callable:
@@ -28,6 +30,7 @@ def track_get_page(fn: Callable) -> Callable:
 
 @track_get_page
 def get_page(url: str) -> str:
-    """ obtain the HTdML content of a particular URL and returns it """
+    """ Makes a http request to a given endpoint
+    """
     response = requests.get(url)
     return response.text
