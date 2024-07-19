@@ -28,6 +28,6 @@ def track_get_page(fn: Callable) -> Callable:
 
 @track_get_page
 def get_page(url: str) -> str:
-    """ obtain the HTML content of a particular URL and returns it """
+    """ obtain the HTdML content of a particular URL and returns it """
     response = requests.get(url)
     return response.text
